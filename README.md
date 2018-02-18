@@ -11,8 +11,11 @@
 *************************************************************
 # Game-AI Project:  Build an AI which plays a game intelligently.
 Link to Presentation and Videos embedded in it:
+
 https://github.com/AJgavane/Game-AI/blob/master/Game-AI%20Project%20Presentation.pdf
+
 Link to videos:
+
 1. https://www.youtube.com/watch?v=4h_y_8KVkpo
 2. https://www.youtube.com/watch?v=zBD8RBodUGg
 3. https://www.youtube.com/watch?v=vzQ8Nkbj0nA
