@@ -1,0 +1,77 @@
+import processing.core.PApplet;
+import processing.core.PVector;
+
+public class Obstacle {
+	// this class will hold the center of smallest element of the obstacle i.e. one grid
+	private PApplet parent;
+	private int sizeOfObstacle = 20;  // square grid size
+	private PVector position = new PVector(0,0);	// location of the topleft corner of obstacle
+	
+	/************* Constructors ************/
+	public Obstacle(PApplet parent) {
+		super();
+		this.parent = parent;
+	}
+
+	public Obstacle(PApplet parent, int sizeOfObstacle, PVector position) {
+		super();
+		this.parent = parent;
+		this.sizeOfObstacle = sizeOfObstacle;
+		this.position.x = position.x + sizeOfObstacle/2 ;
+		this.position.y = position.y + sizeOfObstacle/2;
+	}
+	
+	public Obstacle(int sizeOfObstacle, PVector position) {
+		super();
+		this.sizeOfObstacle = sizeOfObstacle;
+		this.position = position;
+	}
+
+	public Obstacle() {
+		super();
+	}
+
+	/************* Methods ************/
+	public void display() {
+		parent.pushMatrix();
+		parent.translate(position.x-sizeOfObstacle/2, position.y-sizeOfObstacle/2);
+		parent.rect(0, 0, sizeOfObstacle, sizeOfObstacle);
+		parent.popMatrix();
+	}
+	public void display(int count) {
+		parent.pushMatrix();
+		parent.translate(position.x-sizeOfObstacle/2, position.y-sizeOfObstacle/2);
+		parent.fill(120,120,120);
+		parent.rect(0, 0, sizeOfObstacle, sizeOfObstacle);
+//		parent.fill(0,0,0);
+//		parent.text(count,sizeOfObstacle/3,sizeOfObstacle/3);
+		parent.popMatrix();
+	}
+	
+	/************* Getter and Setter************/
+	public PApplet getParent() {
+		return parent;
+	}
+
+	public void setParent(PApplet parent) {
+		this.parent = parent;
+	}
+
+	public int getSizeOfObstacle() {
+		return sizeOfObstacle;
+	}
+
+	public void setSizeOfObstacle(int sizeOfObstacle) {
+		this.sizeOfObstacle = sizeOfObstacle;
+	}
+
+	public PVector getPosition() {
+		return position;
+	}
+
+	public void setPosition(PVector position) {
+		this.position = position;
+	}
+	
+	
+}
